@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontes do Google Fonts para estilização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Projeto - Carrinho de compras - José Jhonata</title>
+</head>
+
+<body>
+  <!-- Conteúdo principal da página -->
+  <main class="conteudo-principal">
+
+    <!-- Elemento decorativo -->
+    <div class="grafismo-azul"></div>
+    
+    <!-- Seção para adicionar produtos ao carrinho -->
+    <section class="adicionar-produto">
+      <h1 class="titulo">
+        Carrinho de <span class="texto-azul">compras</span>
+      </h1>
+
+      <!-- Formulário para seleção de produtos e quantidade -->
+      <form class="formulario">
+        <label class="campo-grupo">
+          <span class="texto-medio-azul">Produto</span>
+
+          <!-- Dropdown para selecionar o produto -->
+          <select class="produto-input" name="produto" id="produto">
+            <option value=""></option>
+            <option value="Fone de ouvido - R$100">Fone de ouvido - R$100</option>
+            <option value="Celular - R$1400">Celular - R$1400</option>
+            <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
+          </select>
+        </label>
+
+        <!-- Seção inferior do formulário com input de quantidade e botões -->
+        <section class="parte-inferior">
+          <label class="campo-grupo">
+            <span class="texto-medio-azul">Qtde.</span>
+
+            <!-- Input para inserir a quantidade de produtos -->
+            <input class="quantidade-input" id="quantidade" type="number" placeholder="100">
+          </label>
+
+          <!-- Botões para adicionar ao carrinho e limpar o carrinho -->
+          <section class="botoes-wrapper">
+            <button onclick="adicionar()" type="button" class="botao-form botao-adicionar">Adicionar</button>
+            <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
+          </section>
+        </section>
+
+      </form>
+    </section>
+
+    <!-- Seção do carrinho de compras -->
+    <section class="carrinho">
+
+      <!-- Imagem de um carrinho de compras -->
+      <img src="./assets/carrinho-cinza.svg" alt="Imagem de um carrinho de compras cinza">
+
+      <!-- Título da seção do carrinho -->
+      <div class="titulo-wrapper">
+        <img src="./assets/icone-carrinho.svg" alt="ícone de carrinho">
+        <h2 class="carrinho__titulo">Produtos no carrinho</h2>
+      </div>
+
+      <!-- Lista de produtos adicionados ao carrinho -->
+      <section class="carrinho__produtos" id="lista-produtos">
+
+        <!-- Produto exemplo já inserido, será dinâmico com JavaScript -->
+        <section class="carrinho__produtos__produto">
+          <span class="texto-azul"></span> <span class="texto-azul">R$ 0</span>
+        </section>
+      </section>
+
+      <!-- Linha divisória visual -->
+      <div class="divisoria"></div>
+
+      <!-- Exibição do total dos produtos no carrinho -->
+      <p class="carrinho__total">
+        Total: <span class="texto-azul" id="valor-total">R$ 0</span>
+      </p>
+      
+    </section>
+  </main>
+
+  <!-- Inclusão do arquivo JavaScript para lógica do carrinho -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
